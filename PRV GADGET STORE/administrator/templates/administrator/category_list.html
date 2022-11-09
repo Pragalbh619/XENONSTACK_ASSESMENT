@@ -1,0 +1,26 @@
+{% extends "administrator/master.html" %} {% block content %}
+
+<div class="col-sm-9">
+    <div class="well">
+        <h4>Category List</h4>
+        <table class="table table-bordered">
+            <tr>
+                <th>Category Name</th>
+                <th>Action</th>
+            </tr>
+            {% for a in data %}
+            <tr>
+                <td>{{a.category}}</td>
+                <td>
+                    <a href="delete_category?id={{a.id}}" class="btn btn-danger">delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

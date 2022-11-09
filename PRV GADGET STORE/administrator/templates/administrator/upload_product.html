@@ -1,0 +1,32 @@
+{% extends "administrator/master.html" %} {% block content %}
+
+<div class="col-sm-9">
+    <div class="well">
+        <h4>Upload Product</h4>
+        <form action='product_upload' method='post' enctype='multipart/form-data'>
+            {%csrf_token %}
+            <label>category</label>
+
+            <select name="category_name" class="form-control">
+                {% for a in data %}
+                <option value="{{a.category}}">{{a.category}}</option>
+                {% endfor %}
+            </select>
+
+            <label>Product Name</label>
+            <input type="text" name="product_name" class="form-control"><br>
+            <label>Price</label>
+            <input type="text" name="price" class="form-control"><br>
+            <label>Details</label>
+            <textarea name="details" class="form-control"></textarea>
+            <br>
+            <label>Upload</label>
+            <input type="file" name="myfile" class="form-control"><br>
+            <input type="submit" class="btn btn-success">
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

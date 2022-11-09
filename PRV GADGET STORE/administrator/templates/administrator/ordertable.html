@@ -1,0 +1,42 @@
+{% extends "administrator/master.html" %} {% block content %}
+
+<center>
+    <h3>Order table</h3>
+</center>
+<div class="col-sm-9">
+    <div class="well">
+        <table border="2" cellpadding="10" width="100%">
+            <tr>
+                <th>category name</th>
+                <th>product name</th>
+                <th> price</th>
+                <th> email</th>
+                <th>state</th>
+                <th>city</th>
+                <th>address</th>
+            </tr>
+            {% for a in data %}
+            <tr>
+                <td>{{a.category}}
+                </td>
+                <td>{{a.product}}</td>
+                <td>{{a.price}}</td>
+                <td>{{a.emails}}</td>
+                <td>{{a.state}}</td>
+                <td>{{a.city}}</td>
+                <td>{{a.address}}</td>
+
+                <td><a href="delete?id={{a.id}}">delete
+        </td>
+
+    </tr>
+    {% endfor %}
+
+
+</table>
+</div>
+</div>
+
+
+
+{% endblock %}

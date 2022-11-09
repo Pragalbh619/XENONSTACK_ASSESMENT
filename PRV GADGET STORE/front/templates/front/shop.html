@@ -1,0 +1,37 @@
+{% extends "front/master.html" %} {% block content %} {% load static %}
+<div class="maincontent-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="latest-product">
+
+                    <div class="product-carousel">
+
+                        {%for a in data%}
+
+                        <div class="single-product">
+                            <div class="product-f-image">
+                                <img src="media/{{a.image}}" style="width:450px">
+
+                            </div>
+
+                            <h2><a href="single-product.html">{{a.product_name}}</a></h2>
+
+                            <div class="product-carousel-price">
+                                <ins>{{a.price}}</ins>
+                            </div>
+                            <br>
+                            <a href="product_details?id={{a.id}}" class="btn btn-primary">Buy Now</a>
+                        </div>
+                        {%endfor%}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End main content area -->
+
+{%endblock%}

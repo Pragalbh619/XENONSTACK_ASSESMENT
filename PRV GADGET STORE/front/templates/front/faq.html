@@ -1,0 +1,75 @@
+{% extends "front/master.html" %} {% block content %} {% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+    
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+    }
+    
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+    }
+</style>
+<br>
+<center>
+    <h1>FAQs</h1>
+</center>
+
+<h3 class="accordion">A Note on Mobile E-Commerce</h3>
+<p class="panel"> If you don’t have a store that is accessible through a phone or that is optimized for a mobile device, you will have a much harder time getting people to purchase items from your store especially if it is an item that they can find from another retailer.
+    Mobile-optimized online stores feature quick and easy checkouts, one tap navigator, bigger images and intuitive interfaces that respond to touch scrolling. By creating an online store that can be accessed from a tablet or smartphone, you likely reach
+    thousands of new customers each month.</p>
+
+<h3 class="accordion">Let’s Start with the Basics</h3>
+<p class="panel">1. E-commerce actually started in 1979. Michael Aldrich connected a domestic television set with a phone line to create online shopping back, which boomed in the 1980s and 1990s before the Internet took off. 2. Amazon launched in 1995. However, Amazon
+    didn’t start turning a profit until 2003. The average order value as of 2012 for Amazon is $47.31, and of course, Amazon is known as one of the largest online retailers. 3. Netflix was not the first online DVD subscription retailer. Blockbuster created
+    Blockbuster.com in 2004, but it’s not clear when the service began that was like Netflix. Ultimately, Redbox and Netflix led to the downfall of what used to the biggest name in home video entertainment. 4. As of the third quarter in 2012, $4,423 in
+    transactions occurred through Paypal per second. Paypal has expanded in recent years becoming the most well-known way to pay online without having to give up your credit card information. 5. Groupon turned down a deal from Google for $6 billion in
+    2010. The online deal broker became an IPO the next year.
+
+</p>
+
+<h3 class="accordion">How Social Media Affects E-Commerce</h3>
+<p class="panel">6. Zappo makes money off of referrals from social media. The online retailer takes $0.75 from Pinterest, $2.08 from Facebook and $33.66 from Twitter. 7. 46 percent of online shoppers count social media when deciding whether to buy something online. 8.
+    47 percent of shoppers say that Facebook has the greatest impact on what they buy. 9. 54 percent of Facebook members use their phones to browse. There’s no doubt that mobile e-commerce has grown rapidly and continues to bring in billions of dollars
+    for retailers who have mobile-accessible online stores. 10. Polyvore has the largest average order value maintaining $66.75 per order.
+
+</p>
+<h3 class="accordion">Facts on E-Commerce Growth</h3>
+<p class="panel">11. More than 80 percent of the online population has used the Internet to purchase goods and services. 12. 50 percent of the population online has shopped at Internet retailers more than one time. 13. By the year 2040, it’s estimated that 95% of all
+    purchases will be through eCommerce. 14. The highest growing country for e-commerce is India followed by Saudi Arabia, Indonesia, Australia and the Philippines. The least growth for online shopping includes Latvia, Ukraine, and France. 15. According
+    to eMarketer estimates, retail e-commerce sales reached $2.3 trillion in 2017, a 23.2 percent increase over the previous year
+
+</p>
+<style>
+    p {
+        display: none;
+    }
+</style>
+<script>
+    $(function() {
+        $("h3").click(function() {
+            $(this).next().slideToggle(); //next is a function for aage bdhane ke liye
+        });
+
+    });
+</script>
+
+
+{%endblock%}

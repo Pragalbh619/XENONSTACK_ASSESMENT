@@ -1,0 +1,43 @@
+{% extends "front/master.html" %} {% block content %} {% load static %}
+
+
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Thank You!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-md-12">
+                <div class="product-content-right">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="product-images">
+                                <div class="product-main-img alert alert-success">
+                                    {%for a in data%} {{a}} {%endfor%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
